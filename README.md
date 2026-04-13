@@ -10,15 +10,15 @@ The task is framed as a **multi-label regression problem** on galaxy images, whe
 
 * **Uncertainty vs Error**
   Prediction entropy shows a moderate positive relationship with model error
-  *(Spearman = 0.5)*
+  *(Spearman = 0.51)*
 
 * **Error Detection**
   Uncertainty identifies high-error predictions with meaningful performance
-  *(ROC-AUC = 0.72 on noisy image data)*
+  *(ROC-AUC = 0.70 on noisy image data)*
 
 * **Attention vs Reliability**
   Grad-CAM–based signals perform near random for error detection
-  *(ROC-AUC = 0.49)*
+  *(ROC-AUC = 0.51)*
 
 ## Main Takeaway
 
@@ -54,7 +54,7 @@ This demonstrates that uncertainty can be used as a **reject-option mechanism**:
 * **Models**:
 
   * ResNet-18
-  * LeViT-128s
+  * EfficientNet-b0
 * **Baseline**: Mean prediction per target variable
 * **Training**:
 
