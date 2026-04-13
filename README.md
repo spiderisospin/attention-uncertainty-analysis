@@ -86,7 +86,6 @@ This demonstrates that uncertainty can be used as a **reject-option mechanism**:
 ```
 main_pipeline.ipynb   # End-to-end pipeline and analysis
 src/                 # Data loading, training, evaluation utilities, etc.
-
 ```
 
 ## Summary
