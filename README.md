@@ -10,11 +10,11 @@ The task is framed as a **multi-label regression problem** on galaxy images, whe
 
 * **Uncertainty vs Error**
   Prediction entropy shows a moderate positive relationship with model error
-  *(Spearman = 0.51)*
+  *(Spearman = 0.49)*
 
 * **Error Detection**
   Uncertainty identifies high-error predictions with meaningful performance
-  *(ROC-AUC = 0.70 on noisy image data)*
+  *(ROC-AUC = 0.68 on noisy image data)*
 
 * **Attention vs Reliability**
   Grad-CAM–based signals perform near random for error detection
