@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 from src.grad_cam import *
 
-#Plot learning curves for ResNet and LeVit
+#Plot learning curves for ResNet and EfficientNet
 
-def learning_curve(resnet_history, levit_history, baseline_score):
+def learning_curve(resnet_history, EfficientNet_history, baseline_score):
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
 
-    # ResNet loss
+    #ResNet loss
     axes[0, 0].plot(resnet_history["train_loss"], marker="o", label="train")
     axes[0, 0].plot(resnet_history["val_loss"], marker="o", label="validation")
     axes[0, 0].set_title("ResNet18 Loss")
@@ -18,7 +18,7 @@ def learning_curve(resnet_history, levit_history, baseline_score):
     axes[0, 0].set_ylabel("MSE loss")
     axes[0, 0].legend()
 
-    # ResNet RMSE
+    #ResNet RMSE
     axes[0, 1].plot(resnet_history["val_rmse"], marker="o", label="validation RMSE")
     axes[0, 1].axhline(baseline_score, linestyle="--", label="baseline RMSE")
     axes[0, 1].set_title("ResNet18 RMSE")
@@ -26,18 +26,18 @@ def learning_curve(resnet_history, levit_history, baseline_score):
     axes[0, 1].set_ylabel("RMSE")
     axes[0, 1].legend()
 
-    # LeViT loss
-    axes[1, 0].plot(levit_history["train_loss"], marker="o", label="train")
-    axes[1, 0].plot(levit_history["val_loss"], marker="o", label="validation")
-    axes[1, 0].set_title("LeViT-128s Loss")
+    #EfficientNet loss
+    axes[1, 0].plot(effnet_history["train_loss"], marker="o", label="train")
+    axes[1, 0].plot(effnet_history["val_loss"], marker="o", label="validation")
+    axes[1, 0].set_title("EfficientNet Loss")
     axes[1, 0].set_xlabel("Epoch")
     axes[1, 0].set_ylabel("MSE loss")
     axes[1, 0].legend()
 
-    # LeViT RMSE
-    axes[1, 1].plot(levit_history["val_rmse"], marker="o", label="validation RMSE")
+    #EfficientNet RMSE
+    axes[1, 1].plot(effnet_history["val_rmse"], marker="o", label="validation RMSE")
     axes[1, 1].axhline(baseline_score, linestyle="--", label="baseline RMSE")
-    axes[1, 1].set_title("LeViT-128s RMSE")
+    axes[1, 1].set_title("EfficientNet RMSE")
     axes[1, 1].set_xlabel("Epoch")
     axes[1, 1].set_ylabel("RMSE")
     axes[1, 1].legend()
