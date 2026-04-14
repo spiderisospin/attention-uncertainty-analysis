@@ -7,7 +7,7 @@ from src.grad_cam import *
 
 #Plot learning curves for ResNet and EfficientNet
 
-def learning_curve(resnet_history, EfficientNet_history, baseline_score):
+def learning_curve(resnet_history, effnet_history, baseline_score):
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
 
     #ResNet loss
